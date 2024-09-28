@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 50px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 450px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .delete-btn {
+            margin-left: 10px;
+            padding: 5px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My shopping list</h1>
+        <form id="itemForm">
+            <label for="itemInput">Enter a new item:</label>
+            <input type="text" id="itemInput" placeholder="Item name" required>
+            <button type="submit">Add Item</button>
+        </form>
+        <ul id="shoppingList">
+            <!-- List items will appear here -->
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('itemForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const itemInput = document.getElementById('itemInput');
+            const itemName = itemInput.value.trim();
+
+            if (itemName !== "") {
+                // Create new list item
+                const listItem = document.createElement('li');
+                listItem.textContent = itemName;
+
+                // Create delete button
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.classList.add('delete-btn');
+                deleteButton.addEventListener('click', function() {
+                    listItem.remove();
+                });
+
+                // Append delete button to the list item
+                listItem.appendChild(deleteButton);
+
+                // Append the new list item to the shopping list
+                document.getElementById('shoppingList').appendChild(listItem);
+
+                // Clear the input field and refocus
+                itemInput.value = "";
+                itemInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>

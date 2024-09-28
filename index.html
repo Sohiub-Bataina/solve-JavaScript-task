@@ -3,15 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-section{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            width: auto;
+            border: 1px solid #ccc;
+        }
+        a {
+            text-decoration: none;
+            align-items: center;
+            color: #333;
+        }
+        fieldset{
+            display: flex;
+            justify-content: left;
+            align-items:flex-start;
+            margin-left: 12px;
+            gap: 2.5%;
+        }
+    </style>
 </head>
 <body>
-    
-<script src="./Data_Types_and_Operators.js"></script>
-<script src="./Strings.js"></script>
-<script src="./Arrays.js"></script>
-<script src="./Functions.js"></script>
-<script src="./Conditionals.js"></script>
-<script src="./Loops.js"></script>
+    <fieldset>
+        <legend> <h1>Java Script</h1></legend>
+        <fieldset style="width: 100px;"><legend> <h1>Task 1</h1></legend>
+        <div class="grid-container">
+            <div class="grid-item"><a href="./task1/index.html">index</a></div>
+            <div class="grid-item"><a href="./task1/Data_Types_and_Operators.js">Data Types and Operators</a></div>
+            <div class="grid-item"><a href="./task1/Strings.js">Strings</a></div>
+            <div class="grid-item"><a href="./task1/Arrays.js">Arrays</a></div>
+            <div class="grid-item"><a href="./task1/Functions.js">Functions</a></div>
+            <div class="grid-item"><a href="./task1/Conditionals.js">Conditionals</a></div>
+            <div class="grid-item"><a href="./task1/Loops.js">Loops</a></div>
+        </div>
+    </fieldset>
+    <fieldset style="width: 100px;"><legend> <h1>Task 2</h1></legend>
+        <div class="grid-container">
+            <div class="grid-item"><a href="./task2/index1.html">index</a></div>
+            <div class="grid-item"><a href="./task2/Loops.js">Loops</a></div>
+            <div class="grid-item"><a href="./task2/Arrays.js">Arrays</a></div>
+            <div class="grid-item"><a href="./task2/IF_Statement.js">IF Statement</a></div>
+            <div class="grid-item"><a href="./task2/Objects.js">Objects</a></div>
+            <div class="grid-item"><a href="./task2/Function.js">Function</a></div>
+        </div>
+    </fieldset>
+        <fieldset style="width: 100px;"><legend> <h1>Hangman</h1></legend>
+            <div class="grid-container">
+                <div class="grid-item"><a href="./hangman/hangman.html">Html</a></div>
+                <div class="grid-item"><a href="./hangman/hangman.css">CSS</a></div>
+                <div class="grid-item"><a href="./hangman/hangman.js">Java Script</a></div>
+            </div>
+        </fieldset>
 </body>
 </html>

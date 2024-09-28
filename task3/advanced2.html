@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Score Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            width: 5px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .color-blue{
+            color: #0f00b7;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="color-blue">Use a Test Score Array</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <br>
+    <label for="score">Score:</label>
+    <input type="number" id="score">
+    <br><br>
+    <button id="add">Add to Array</button>
+    <button id="displayResults">Display Results</button>
+    <button id="displayScores">Display Scores</button>
+
+    <div id="results"></div>
+
+    <table id="scores_table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    <script src="./advanced2.js"></script>
+</body>
+</html>
